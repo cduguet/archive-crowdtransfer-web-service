@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <title>CrowdTransfer</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/css-social-buttons/social-buttons.css" rel="stylesheet">
+  </head>   
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">
+            <img class="navbar-logo"  src="img/CrowdTransferLogo.svg" onerror="this.onerror=null; this.src='img/navbar-brand-ct.png'">
+          </a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            
+            <li class="dropdown">
+              <img style="width:30px; height:30px;" src="img/default-user.png">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="username-menu">Potato <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="./bootstrap.css">My Profile</a></li>
+                <li><a href="./variables.less">My Account</a></li>
+                <li class="divider"></li>
+                <li><a href="./bootswatch.less">Logout</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./swap_offers">Dashboard</a>
+            </li>
+            <li>
+              <a href="./swap_offers">Swap Now!</a>
+            </li>
+            <li>
+              <a href="../">How does it work?</a>
+            </li>
+            <li>
+              <a href="../">About Us</a>
+            </li>
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://builtwithbootstrap.com/" target="_blank">Log Out</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="container jumbotron" id="main-header">
+      <div class="container col-md-8 col-md-offset-2">
+      <h1> Welcome to the Revolution in Money Transfers</h1>
+      <p > We want to connect people and give them the power to send money connecting with others.</p>
+      <p><a class="btn btn-primary btn-lg" role="button">Join us! &raquo;</a></p>
+      
+    </div>
+    </div>
+
+
+    <hr>
+
+    <!-- MAKE OFFER -->
+    <!--
+    <div class="col-lg-12"> <div class="page-header"> <h1 id="tables"> Make a Swap offer </h1> </div> </div>-->
+    <div class="container col-md-12 make-offer">
+      <form class="well col-md-6 col-md-offset-3 form-horizontal">
+        <fieldset>
+          <legend>I want to transfer...</legend>
+          <div class="form-group">
+            <label for="fromCountry" class="col-lg-2 control-label">From</label>
+            <div class="col-lg-10">
+              <select class="form-control" id="fromCountry" placeholder="From">
+                <option>Chile</option>
+                <option>Germany</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="toCountry" class="col-lg-2 control-label">To</label>
+            <div class="col-lg-10">
+              <select class="form-control" id="toCountry" placeholder="To">
+                <option>Germany</option>
+                <option>Chile</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="amount" class="col-lg-2 control-label">Amount</label>
+            <div class="col-lg-10">
+              <input type="number" class="form-control" id="amount" placeholder="Amount">        
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+            <button class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    
+
+    <hr class="col-xs-12">
+    
+    <div class="row">
+      <div class="container col-xs-12" id="current_offers">      
+        <div class="col-sm-8 col-sm-offset-2 col-xs-12"> <div class="page-header"> <h1 id="tables"> Current Swap offers </h1> </div> </div>
+
+
+        <!--******************* THIS IS ONE OFFER ELEMENT: BEGIN ************************************-->
+        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8" id="single-offer">
+          <div class="panel-body">
+            <div class="media">
+              <div id="user-info" class="pull-left">
+                <a href="#"> <!-- FIXME: link to user profile has to come here -->
+                  <img class="media-object" src="img/default-user.png" alt="No available logo">
+                  <p> Carlos, Chile </p>
+                </a>
+                <div> <a href="#" class="sb small no-border star">Reputation</a> 700 </div>
+                <p class="sb small no-border ">
+                  <a href="#" class="twitter">Twitter</a>
+                  <a href="#" class="facebook">Facebook</a>
+                  <a href="#" class="linkedin">LinkedIn</a>
+                </p>
+              </div>
+              <div class="media-body">
+                <div class="well">
+                  
+                    <div class="row"> 
+                      <div class="col-sm-6 nopadding col-xs-6"> 
+                        <div class="offer-title">
+                        <span class="offer-currency">EUR </span>
+                        <p class="offer-amount"> 500 </p>
+                        </div> 
+                        
+                      </div>
+                      <div class="col-sm-6 nopadding col-xs-6"> 
+                      <div style="position:relative"> 
+                        <div class="glyphicon glyphicon-arrow-right put_arrow"> </div>
+                      </div>
+
+                        <div class="offer-title">
+                        <span class="offer-currency">CLP </span>
+                        <p class="offer-amount"> 384,637</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div style="text-align:center" class="col-xs-6"> 
+                        <div style="margin:auto; display:inline-block ">
+                        <img src="img/squared-flag-res-32x32/de.png"> 
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/82 money paper.svg"> 
+                        </div>
+                      </div>
+                      <div style="text-align:center" class="col-xs-6"> 
+                        <div style="margin:auto; display:inline-block ">
+                        <img src="img/squared-flag-res-32x32/cl.png">
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/66 money dollar bank.svg"> 
+                        </div>
+                      </div>
+                    </div>
+                                          
+                </div>
+                <em> Expires in 5 days, 20 hours</em>
+                <div class="pull-right"> 
+                  <button class="btn btn-success"> Let's Swap!   </button>    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--******************* THIS IS ONE OFFER ELEMENT: END ************************************-->
+
+        <!--******************* THIS IS ONE OFFER ELEMENT: BEGIN ************************************-->
+        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8" id="single-offer">
+          <div class="panel-body">
+            <div class="media">
+              <div id="user-info" class="pull-left">
+                <a href="#"> <!-- FIXME: link to user profile has to come here -->
+                  <img class="media-object" src="img/default-user.png" alt="No available logo">
+                  <p> Lena, Germany </p>
+                </a>
+                <div> <a href="#" class="sb small no-border star">Reputation</a> 700 </div>
+                <p class="sb small no-border ">
+                  <a href="#" class="twitter">Twitter</a>
+                  <a href="#" class="facebook">Facebook</a>
+                  <a href="#" class="linkedin">LinkedIn</a>
+                </p>
+              </div>
+              <div class="media-body">
+                <div class="well">
+                  
+                    <div class="row"> 
+                      <div class="col-sm-6 nopadding col-xs-6"> 
+                        <div class="offer-title">
+                        <span class="offer-currency">CLP </span>
+                        <p class="offer-amount"> 250000 </p>
+                        </div> 
+                      </div>
+                      <div class="col-sm-6 nopadding col-xs-6"> 
+                      <div style="position:relative"> 
+                        <div class="glyphicon glyphicon-arrow-right put_arrow"> </div>
+                      </div>
+
+                        <div class="offer-title">
+                        <span class="offer-currency">EUR </span>
+                        <p class="offer-amount"> 325,745.50 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div style="text-align:center" class="col-xs-6"> 
+                        <div style="margin:auto; display:inline-block ">
+                        <img src="img/squared-flag-res-32x32/cl.png"> 
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/82 money paper.svg"> 
+                        </div>
+                      </div>
+                      <div style="text-align:center" class="col-xs-6"> 
+                        <div style="margin:auto; display:inline-block ">
+                        <img src="img/squared-flag-res-32x32/de.png">
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/66 money dollar bank.svg"> 
+                        </div>
+                      </div>
+                    </div>
+                                          
+                </div>
+                <em> Expires in 2 days, 12 hours</em>
+                <div class="pull-right"> 
+                  <button class="btn btn-success"> Let's Swap!   </button>    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--******************* THIS IS ONE OFFER ELEMENT: END ************************************-->
+
+        <!--******************* THIS IS ONE OFFER ELEMENT: BEGIN ************************************-->
+        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8" id="single-offer">
+          <div class="panel-body">
+            <div class="media">
+              <div id="user-info" class="pull-left">
+                <a href="#"> <!-- FIXME: link to user profile has to come here -->
+                  <img class="media-object" src="img/default-user.png" alt="No available logo">
+                  <p>Rocio, Spain</p>
+                </a>
+                <div> <a href="#" class="sb small no-border star">Reputation</a> 700 </div>
+                <p class="sb small no-border ">
+                  <a href="#" class="twitter">Twitter</a>
+                  <a href="#" class="facebook">Facebook</a>
+                  <a href="#" class="linkedin">LinkedIn</a>
+                </p>
+              </div>
+              <div class="media-body">
+                <div class="well">
+                  
+                    <div class="row"> 
+                      <div class="col-sm-6 nopadding col-xs-6"> 
+                        <div class="offer-title">
+                        <span class="offer-currency">EUR </span>
+                        <p class="offer-amount"> 100 </p>
+                        </div> 
+                        
+                      </div>
+                      <div class="col-sm-6 nopadding col-xs-6"> 
+                      <div style="position:relative"> 
+                        <div class="glyphicon glyphicon-arrow-right put_arrow"> </div>
+                      </div>
+
+                        <div class="offer-title">
+                        <span class="offer-currency">CLP </span>
+                        <p class="offer-amount"> 76,927.49 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div style="text-align:center" class="col-xs-6"> 
+                        <div style="margin:auto; display:inline-block ">
+                        <img src="img/squared-flag-res-32x32/es.png"> 
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/66 money dollar bank.svg"> 
+                        </div>
+                      </div>
+                      <div style="text-align:center" class="col-xs-6"> 
+                        <div style="margin:auto; display:inline-block ">
+                        <img src="img/squared-flag-res-32x32/cl.png">
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/66 money dollar bank.svg"> 
+                        </div>
+                      </div>
+                    </div>
+                                          
+                </div>
+                <em> Expires in 3 hours</em>
+                <div class="pull-right"> 
+                  <button class="btn btn-success"> Let's Swap!   </button>    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--******************* THIS IS ONE OFFER ELEMENT: END ************************************-->
+                
+    
+      </div>
+    </div>
+
+    <hr class="col-xs-12">
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+ 
+     <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 CrowdTransfer, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <script src="js/bootswatch.js"></script>
+  </body>
+</html>
