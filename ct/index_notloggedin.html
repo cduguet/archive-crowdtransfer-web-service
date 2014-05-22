@@ -30,7 +30,13 @@
   </head>   
 <!-- NAVBAR
 ================================================== -->
-  <body>
+  <body style="
+  color: #5a5a5a;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-image: url(./img/dottedworldmap.jpg);
+  ">
+
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -47,22 +53,6 @@
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">
             
-            <li class="dropdown">
-              <img style="width:30px; height:30px;" src="img/default-user.png">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="username-menu">Potato <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="./bootstrap.css">My Profile</a></li>
-                <li><a href="./variables.less">My Account</a></li>
-                <li class="divider"></li>
-                <li><a href="./bootswatch.less">Logout</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="./swap_offers">Dashboard</a>
-            </li>
-            <li>
-              <a href="./swap_offers">Swap Now!</a>
-            </li>
             <li>
               <a href="../">How does it work?</a>
             </li>
@@ -73,7 +63,8 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Log Out</a></li>
+            <li><a href="index_loggedin.html">Log In</a></li>
+            <li><a href="#" target="_blank">Register</a></li>
           </ul>
 
         </div>
@@ -85,14 +76,17 @@
     <div class="container jumbotron" id="main-header">
       <div class="container col-md-8 col-md-offset-2">
       <h1> Welcome to the Revolution in Money Transfers</h1>
-      <p > We want to connect people and give them the power to send money connecting with others.</p>
+      <p > A new way to transfer and exchange money internationally by connecting with others.</p>
       <p><a class="btn btn-primary btn-lg" role="button">Join us! &raquo;</a></p>
       
-    </div>
+      </div>
     </div>
 
+
+    <div class="container"> 
 
     <hr>
+
 
     <!-- MAKE OFFER -->
     <!--
@@ -146,10 +140,10 @@
 
 
         <!--******************* THIS IS ONE OFFER ELEMENT: BEGIN ************************************-->
-        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8" id="single-offer">
+        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8 single-offer">
           <div class="panel-body">
             <div class="media">
-              <div id="user-info" class="pull-left">
+              <div class="user-info pull-left">
                 <a href="#"> <!-- FIXME: link to user profile has to come here -->
                   <img class="media-object" src="img/default-user.png" alt="No available logo">
                   <p> Carlos, Chile </p>
@@ -210,10 +204,10 @@
         <!--******************* THIS IS ONE OFFER ELEMENT: END ************************************-->
 
         <!--******************* THIS IS ONE OFFER ELEMENT: BEGIN ************************************-->
-        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8" id="single-offer">
+        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8 single-offer">
           <div class="panel-body">
             <div class="media">
-              <div id="user-info" class="pull-left">
+              <div class="user-info pull-left">
                 <a href="#"> <!-- FIXME: link to user profile has to come here -->
                   <img class="media-object" src="img/default-user.png" alt="No available logo">
                   <p> Lena, Germany </p>
@@ -242,7 +236,7 @@
 
                         <div class="offer-title">
                         <span class="offer-currency">EUR </span>
-                        <p class="offer-amount"> 325,745.50 </p>
+                        <p class="offer-amount"> 325.75 </p>
                         </div>
                       </div>
                     </div>
@@ -273,10 +267,10 @@
         <!--******************* THIS IS ONE OFFER ELEMENT: END ************************************-->
 
         <!--******************* THIS IS ONE OFFER ELEMENT: BEGIN ************************************-->
-        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8" id="single-offer">
+        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8 single-offer">
           <div class="panel-body">
             <div class="media">
-              <div id="user-info" class="pull-left">
+              <div class="user-info pull-left">
                 <a href="#"> <!-- FIXME: link to user profile has to come here -->
                   <img class="media-object" src="img/default-user.png" alt="No available logo">
                   <p>Rocio, Spain</p>
@@ -306,7 +300,7 @@
 
                         <div class="offer-title">
                         <span class="offer-currency">CLP </span>
-                        <p class="offer-amount"> 76,927.49 </p>
+                        <p class="offer-amount"> 76,927 </p>
                         </div>
                       </div>
                     </div>
@@ -351,6 +345,7 @@
      <!-- /END THE FEATURETTES -->
 
 
+
       <!-- FOOTER -->
       <footer>
 
@@ -358,8 +353,7 @@
         <p>&copy; 2014 CrowdTransfer, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
-    </div><!-- /.container -->
-
+      </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

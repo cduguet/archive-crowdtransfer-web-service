@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="img/favicon.ico">
 
-    <title>CrowdTransfer- username</title>
+    <title>CrowdTransfer | Swap Now</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -49,12 +49,12 @@
             
             <li class="dropdown">
               <img style="width:30px; height:30px;" src="img/default-user.png">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="username-menu">Potato <span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="username-menu"> Potato <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="./bootstrap.css">My Profile</a></li>
-                <li><a href="./variables.less">My Account</a></li>
+                <li><a href="./bootstrap.css"> My Profile </a></li>
+                <li><a href="./variables.less">My Account </a></li>
                 <li class="divider"></li>
-                <li><a href="./bootswatch.less">Logout</a></li>
+                <li><a href="./bootswatch.less">Logout </a></li>
               </ul>
             </li>
             <li>
@@ -80,11 +80,60 @@
       </div>
     </div>
 
+    
+    
+    <div style="margin-top:50px"class="container"> 
 
-    <div class="container">
+    
+
+
+    <!-- MAKE OFFER -->
+    <!--
+    <div class="col-lg-12"> <div class="page-header"> <h1 id="tables"> Make a Swap offer </h1> </div> </div>-->
+    <div class="container col-md-12 make-offer">
+      <form class="well col-md-6 col-md-offset-3 form-horizontal">
+        <fieldset>
+          <legend>I want to transfer...</legend>
+          <div class="form-group">
+            <label for="fromCountry" class="col-lg-2 control-label">From</label>
+            <div class="col-lg-10">
+              <select class="form-control" id="fromCountry" placeholder="From">
+                <option>Chile</option>
+                <option>Germany</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="toCountry" class="col-lg-2 control-label">To</label>
+            <div class="col-lg-10">
+              <select class="form-control" id="toCountry" placeholder="To">
+                <option>Germany</option>
+                <option>Chile</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="amount" class="col-lg-2 control-label">Amount</label>
+            <div class="col-lg-10">
+              <input type="number" class="form-control" id="amount" placeholder="Amount">        
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+            <button class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    
+    
     <div class="row">
       <div class="container col-xs-12" id="current_offers">      
-        <div class="col-sm-8 col-sm-offset-2 col-xs-12"> <div class="page-header"> <h1 id="tables"> My Current Swap Offers </h1> </div> </div>
+        <div class="col-sm-8 col-sm-offset-2 col-xs-12"> <div class="page-header"> <h3 id="tables"> Maybe you are interested in these... </h3> </div> </div>
 
 
         <!--******************* THIS IS ONE OFFER ELEMENT: BEGIN ************************************-->
@@ -94,9 +143,9 @@
               <div class="user-info pull-left">
                 <a href="#"> <!-- FIXME: link to user profile has to come here -->
                   <img class="media-object" src="img/default-user.png" alt="No available logo">
-                  <p> Potato, Chile </p>
+                  <p> Carlos, Chile </p>
                 </a>
-                <div> <a href="#" class="sb small no-border star">Reputation</a> 9999 </div>
+                <div> <a href="#" class="sb small no-border star">Reputation</a> 700 </div>
                 <p class="sb small no-border ">
                   <a href="#" class="twitter">Twitter</a>
                   <a href="#" class="facebook">Facebook</a>
@@ -109,8 +158,8 @@
                     <div class="row"> 
                       <div class="col-sm-6 nopadding col-xs-6"> 
                         <div class="offer-title">
-                        <span class="offer-currency">CLP </span>
-                        <p class="offer-amount"> 1,000,000 </p>
+                        <span class="offer-currency">EUR </span>
+                        <p class="offer-amount"> 500 </p>
                         </div> 
                         
                       </div>
@@ -120,21 +169,21 @@
                       </div>
 
                         <div class="offer-title">
-                        <span class="offer-currency">EUR </span>
-                        <p class="offer-amount"> 1322 </p>
+                        <span class="offer-currency">CLP </span>
+                        <p class="offer-amount"> 384,637</p>
                         </div>
-                      </div>  
+                      </div>
                     </div>
                     <div class="row">
                       <div style="text-align:center" class="col-xs-6"> 
                         <div style="margin:auto; display:inline-block ">
-                        <img src="img/squared-flag-res-32x32/cl.png"> 
-                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/66 money dollar bank.svg"> 
+                        <img src="img/squared-flag-res-32x32/de.png"> 
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/82 money paper.svg"> 
                         </div>
                       </div>
                       <div style="text-align:center" class="col-xs-6"> 
                         <div style="margin:auto; display:inline-block ">
-                        <img src="img/squared-flag-res-32x32/es.png">
+                        <img src="img/squared-flag-res-32x32/cl.png">
                         <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/66 money dollar bank.svg"> 
                         </div>
                       </div>
@@ -143,7 +192,7 @@
                 </div>
                 <em> Expires in 5 days, 20 hours</em>
                 <div class="pull-right"> 
-                  <button class="btn btn-cancel"> Cancel Offer   </button>    
+                  <button class="btn btn-success"> Let's Swap!   </button>    
                 </div>
               </div>
             </div>
@@ -151,9 +200,8 @@
         </div>
         <!--******************* THIS IS ONE OFFER ELEMENT: END ************************************-->
 
-
-        <!--******************* THIS IS AN INTEREST SENT: BEGIN ****************************************-->
-        <div class="panel panel-default col-xs-10 col-xs-offset-2 col-sm-offset-3 col-sm-7 single-offer">
+        <!--******************* THIS IS ONE OFFER ELEMENT: BEGIN ************************************-->
+        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8 single-offer">
           <div class="panel-body">
             <div class="media">
               <div class="user-info pull-left">
@@ -170,27 +218,59 @@
               </div>
               <div class="media-body">
                 <div class="well">
-                    <p> " Estoy muy interesado en compartir contigo. Qué te parece este fin de semana?"
-                    </p>                                          
+                  
+                    <div class="row"> 
+                      <div class="col-sm-6 nopadding col-xs-6"> 
+                        <div class="offer-title">
+                        <span class="offer-currency">CLP </span>
+                        <p class="offer-amount"> 250000 </p>
+                        </div> 
+                      </div>
+                      <div class="col-sm-6 nopadding col-xs-6"> 
+                      <div style="position:relative"> 
+                        <div class="glyphicon glyphicon-arrow-right put_arrow"> </div>
+                      </div>
+
+                        <div class="offer-title">
+                        <span class="offer-currency">EUR </span>
+                        <p class="offer-amount"> 325.75 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div style="text-align:center" class="col-xs-6"> 
+                        <div style="margin:auto; display:inline-block ">
+                        <img src="img/squared-flag-res-32x32/cl.png"> 
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/82 money paper.svg"> 
+                        </div>
+                      </div>
+                      <div style="text-align:center" class="col-xs-6"> 
+                        <div style="margin:auto; display:inline-block ">
+                        <img src="img/squared-flag-res-32x32/de.png">
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/66 money dollar bank.svg"> 
+                        </div>
+                      </div>
+                    </div>
+                                          
                 </div>
                 <em> Expires in 2 days, 12 hours</em>
                 <div class="pull-right"> 
-                  <button class="btn btn-success"> Get contact details   </button>    
+                  <button class="btn btn-success"> Let's Swap!   </button>    
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!--******************* THIS IS AN INTEREST SENT :END ********************************************-->
+        <!--******************* THIS IS ONE OFFER ELEMENT: END ************************************-->
 
-         <!--******************* THIS IS AN INTEREST SENT: BEGIN ****************************************-->
-        <div class="panel panel-default col-xs-10 col-xs-offset-2 col-sm-offset-3 col-sm-7 single-offer">
+        <!--******************* THIS IS ONE OFFER ELEMENT: BEGIN ************************************-->
+        <div class="panel panel-default col-xs-12 col-sm-offset-2 col-sm-8 single-offer">
           <div class="panel-body">
             <div class="media">
               <div class="user-info pull-left">
                 <a href="#"> <!-- FIXME: link to user profile has to come here -->
                   <img class="media-object" src="img/default-user.png" alt="No available logo">
-                  <p> Hola, Chile </p>
+                  <p>Rocio, Spain</p>
                 </a>
                 <div> <a href="#" class="sb small no-border star">Reputation</a> 700 </div>
                 <p class="sb small no-border ">
@@ -201,56 +281,56 @@
               </div>
               <div class="media-body">
                 <div class="well">
-                    <p> " Second : hey i wanna change, are you interested?"
-                    </p>                                          
+                  
+                    <div class="row"> 
+                      <div class="col-sm-6 nopadding col-xs-6"> 
+                        <div class="offer-title">
+                        <span class="offer-currency">EUR </span>
+                        <p class="offer-amount"> 100 </p>
+                        </div> 
+                        
+                      </div>
+                      <div class="col-sm-6 nopadding col-xs-6"> 
+                      <div style="position:relative"> 
+                        <div class="glyphicon glyphicon-arrow-right put_arrow"> </div>
+                      </div>
+
+                        <div class="offer-title">
+                        <span class="offer-currency">CLP </span>
+                        <p class="offer-amount"> 76,927 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div style="text-align:center" class="col-xs-6"> 
+                        <div style="margin:auto; display:inline-block ">
+                        <img src="img/squared-flag-res-32x32/es.png"> 
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/66 money dollar bank.svg"> 
+                        </div>
+                      </div>
+                      <div style="text-align:center" class="col-xs-6"> 
+                        <div style="margin:auto; display:inline-block ">
+                        <img src="img/squared-flag-res-32x32/cl.png">
+                        <img style="height:30px" src="img/Money Concepts/MoneyConcepts_svg/66 money dollar bank.svg"> 
+                        </div>
+                      </div>
+                    </div>
+                                          
                 </div>
-                <em> Expires in 2 days, 12 hours</em>
+                <em> Expires in 3 hours</em>
                 <div class="pull-right"> 
-                  <button class="btn btn-success"> Get contact details   </button>    
+                  <button class="btn btn-success"> Let's Swap!   </button>    
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!--******************* THIS IS AN INTEREST SENT :END ********************************************-->
 
-         <!--******************* THIS IS AN INTEREST SENT: BEGIN ****************************************-->
-        <div class="panel panel-default col-xs-10 col-xs-offset-2 col-sm-offset-3 col-sm-7 single-offer">
-          <div class="panel-body">
-            <div class="media">
-              <div class="user-info pull-left">
-                <a href="#"> <!-- FIXME: link to user profile has to come here -->
-                  <img class="media-object" src="img/default-user.png" alt="No available logo">
-                  <p> Ashok, India </p>
-                </a>
-                <div> <a href="#" class="sb small no-border star">Reputation</a> 700 </div>
-                <p class="sb small no-border ">
-                  <a href="#" class="twitter">Twitter</a>
-                  <a href="#" class="facebook">Facebook</a>
-                  <a href="#" class="linkedin">LinkedIn</a>
-                </p>
-              </div>
-              <div class="media-body">
-                <div class="well">
-                    <p> " Cool! I'm in!"
-                    </p>                                          
-                </div>
-                <em> Expires in 2 days, 12 hours</em>
-                <div class="pull-right"> 
-                  <button class="btn btn-success"> Get contact details   </button>    
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--******************* THIS IS AN INTEREST SENT :END ********************************************-->
-
-                
-    
+        <!--******************* THIS IS ONE OFFER ELEMENT: END ************************************-->
       </div>
-    </div>
+    </div>            
 
-    <hr class="col-xs-12">
+    <hr>
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
