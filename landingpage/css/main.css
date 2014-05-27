@@ -1,0 +1,210 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* HEXA combination:
+	gray: #7B7D7F;
+	light blue: #AAD5FF;
+	white: #F7FBFF;
+	darker blue: #46729E;
+	light grey: #C6C9CC;
+
+*/
+
+
+#bodybckg {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	
+	background-image: url(../img/dottedworldmap.png);
+
+	background-position: center;
+	background-repeat: no-repeat;
+
+
+ /*
+ background:#F7FBFF;
+*/
+
+/*background: #aacbed; /* Old browsers */
+/*background: -moz-linear-gradient(top,  #aacbed 33%, #aacbed 39%, #f9cf7f 100%); /* FF3.6+ */
+/*background: -webkit-gradient(linear, left top, left bottom, color-stop(33%,#aacbed), color-stop(39%,#aacbed), color-stop(100%,#f9cf7f)); /* Chrome,Safari4+ */
+/*background: -webkit-linear-gradient(top,  #aacbed 33%,#aacbed 39%,#f9cf7f 100%); /* Chrome10+,Safari5.1+ */
+/*background: -o-linear-gradient(top,  #aacbed 33%,#aacbed 39%,#f9cf7f 100%); /* Opera 11.10+ */
+/*background: -ms-linear-gradient(top,  #aacbed 33%,#aacbed 39%,#f9cf7f 100%); /* IE10+ */
+/*background: linear-gradient(to bottom,  #aacbed 33%,#aacbed 39%,#f9cf7f 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aacbed', endColorstr='#f9cf7f',GradientType=0 ); /* IE6-9 */
+}
+
+.container {
+	padding-left: 10%px;
+	padding-right: 10%px;
+}
+
+.form-group {
+	max-width: 400px;
+	margin: auto;
+}
+
+
+.socialicon {
+	margin:auto;
+}
+
+.transparentbox {	
+	border-radius : 20px;
+	max-width: 800px;
+	width:80%;
+	min-width: 300px;
+	margin:auto;
+	/*background: rgba(217,217,243,0.5); */
+	background: rgba(255,255,255,0.7);
+	box-shadow: 0px 0px 3px 3px #AAAAAA;
+	font-size: 18px;
+	text-align:justify;
+	/*filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.boxheader {
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	padding:1.5em 7%;
+	/*background: rgba(217,217,243,0.5);*/
+	background: #AAD5FF;
+}
+
+#logo {
+
+	clip:rect(0px,0px,1000px,0px);
+	width:100%;
+
+}
+.textwidth {
+	padding-top: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+	min-width: 250px;
+}
+
+#other_section {
+	display:none;
+}
+
+#clpcurrency {
+	display:none;
+}
+
+#languagebar {
+	text-align: right;
+}
+
+.noborder {
+	border-width: 0px;
+}
+
+/*
+* {
+	border-style: dashed;
+	border-width: 1px;
+}*/
+
+.logo {
+	display: block;
+	width:100%;
+}
+
+
+.jumbotron p {
+	font-family: "Times New Roman"; 
+}
+
+#formstyle {
+	font-style: Verdana;
+	font-size: 8px;
+}
+
+.well {
+	background: rgba(217,217,243,0.5);
+}
+
+
+#to-from {
+	padding:0px;	
+	width:30px;
+}
+
+.onelineblock{
+	display:block;
+	text-align: right;
+}
+
+footer {
+	font-size: 12;
+}
+/*------------------------------------------------------ GOOGLE FORMS CSS ------------------------------------------------*/
+
+
+.ss-q-help {
+	font-style:italic;
+	font-size: 0.6em;
+	color: gray;
+	display: inline-block;
+}
+
+.ss-required-asterisk {
+ 	color: red;
+ 	font-size: 1em;
+ 	position: relative;
+ 	display: inline-block;
+}
+
+.ss-q-title {
+	margin-right: 10px;
+	display:inline-block;
+}
+
+.ss-choices {
+	padding-left: 8%;
+}
+
+.ss-choice-item {
+	display:inline-block;
+	margin: auto;
+	margin-left:10%;
+	font-weight: lighter;
+}
+
+.label {
+	font-weight:normal;
+}
+
+.ss-form-entry {
+	margin: 0px 0px 10px 0px;
+}
+
+.form-control {
+	display: inline-block;
+	width:170px;
+	max-width: 100%;
+	float:right;
+}
+
+
+.ss-q-select {
+	display:block;
+	margin:0px 0px 0px 15%;
+	max-width:150px;
+}
+
+
+.ss-q-number {
+	display:inline-block;
+	margin:0 0 0 5%;
+	max-width:100px;
+}
+
+.panel-default>.panel-heading {
+	background-color: #C6C9CC;
+	background: #FFFFFF;
+}

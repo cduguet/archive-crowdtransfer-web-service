@@ -63,6 +63,8 @@ a.navbar-brand {
 
 .single-offer{
   padding: 0px;
+  /*border-color: #97c8e8;*/
+  background-color: #e7f2fa;
 }
 
 
@@ -74,8 +76,18 @@ a.navbar-brand {
 
 
 .well {
-  background-color: rgba(236, 240, 241, 0.7);
+  /*background-color: rgba(236, 240, 241, 0.7);*/
+  background-color: rgba(215,234,246,0.7);
 }
+
+.interest-message {
+  background-color: #fff;
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
 
 .navbar-logo {
   height:2em;
