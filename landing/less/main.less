@@ -3,6 +3,8 @@
 @import "import/forms.less";
 @import "import/fonts.less";
 @import "import/icons.less";
+//iCheck
+@import "../css/blue.css";
 
 body{
 	font-family: 'Roboto Light';
@@ -127,7 +129,7 @@ div{
 		text-align: center;
 		background-image:url('../img/dottedworldmap.png');
 		background-repeat: no-repeat;
-		background-position: 0 80px;
+		background-position: 0 -20px;
 	}
 }
 
@@ -157,7 +159,10 @@ div{
 	display: inline-block;
 	float: left;
 	width:50%;
-	padding-right:20px;
+	
+	&:first-child{
+		padding-right:20px;
+	}
 }
 
 .desc-item{
@@ -194,6 +199,7 @@ div{
 	display: inline-block;
 	min-height:200px;
 	width:100%;
+	max-width:400px;
 	margin:0 auto;
 	padding:0 10px;
 }
@@ -213,8 +219,52 @@ div{
 
 .footer{
 	width:100%;
-	min-height:500px;
-	background-position:0px -10px;
+	margin-top:100px;
+	min-height:100px;
+	background-color:@gray-dark;
+	color:white;
+}
+
+.footer-wrap{
+	padding:10px;
+}
+
+.left{
+	display:inline-block;
+	float:left;
+	padding-left:20px;
+}
+
+.right{
+	display:inline-block;
+	float:right;
+	padding-right:20px;
+}
+
+.currency{
+	top:6px !important;
+}
+
+.copy{
+	display: inline-block;
+	float: left;
+	font-size:1.2em;
+}
+
+.social{
+	display: inline-block;
+	float: right;
+
+	a{
+		font-size:3em;
+		color:white;
+		text-decoration:none;
+
+		&:hover{
+			position:relative;
+			top:-5px;
+		}
+	}
 }
 
 @import "import/queries.less";
